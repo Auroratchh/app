@@ -7,11 +7,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.gamesapp"
+    namespace = "com.example.ghibliapp"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.gamesapp"
+        applicationId = "com.example.ghibliapp"
         minSdk = 31
         targetSdk = 35
         versionCode = 1
@@ -59,23 +59,21 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
-    // icons - extended
     implementation(libs.androidx.material.icons.extended)
 
-    // Hilt dependencies
     implementation(libs.hilt.android)
     ksp(libs.hilt.android.compiler)
 
-    // navigation dependencies
     implementation(libs.androidx.navigation.compose)
 
-    // Retrofit
     implementation(libs.converter.gson)
 
-    // Coil
     implementation(libs.coil.compose)
 
-    // Paging 3
     implementation(libs.androidx.paging.runtime)
     implementation(libs.androidx.paging.compose)
+
+    implementation(libs.androidx.room.runtime)
+    implementation(libs.androidx.room.ktx)
+    ksp(libs.androidx.room.compiler)
 }
