@@ -53,7 +53,7 @@ fun FavoritesView(viewModel: FilmViewModel, navController: NavController) {
     Scaffold(
         topBar = {
             CenterAppBar(
-                name = "My Favorites",
+                name = "Favoritos",
                 containerColor = MaterialTheme.colorScheme.surface
             )
         },
@@ -73,13 +73,13 @@ fun FavoritesView(viewModel: FilmViewModel, navController: NavController) {
                     verticalArrangement = Arrangement.Center
                 ) {
                     Text(
-                        "No favorites yet",
+                        "No hay favoritos",
                         fontSize = 18.sp,
                         color = MaterialTheme.colorScheme.onSurface
                     )
                     Spacer(modifier = Modifier.height(8.dp))
                     Text(
-                        "Add some films to your favorites!",
+                        "Añade tus peliculas favoritas",
                         fontSize = 14.sp,
                         color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.6f)
                     )

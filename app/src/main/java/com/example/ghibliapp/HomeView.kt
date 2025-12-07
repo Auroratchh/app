@@ -13,10 +13,8 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateMapOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -41,7 +39,7 @@ fun HomeView(viewModel: FilmViewModel, navController: NavController) {
     Scaffold(
         topBar = {
             CenterAppBar(
-                name = "Studio Ghibli Films",
+                name = "Studio Ghibli",
                 containerColor = MaterialTheme.colorScheme.surface
             )
         },
@@ -71,6 +69,8 @@ fun HomeView(viewModel: FilmViewModel, navController: NavController) {
                     ) {
                         Text("No films available", color = MaterialTheme.colorScheme.onSurface)
                     }
+
+
                 } else {
                     LazyColumn(
                         contentPadding = PaddingValues(vertical = 8.dp)

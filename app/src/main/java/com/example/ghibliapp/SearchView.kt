@@ -85,7 +85,7 @@ fun SearchView(viewModel: FilmViewModel, navController: NavController) {
                 onActiveChange = {
                     active = it
                 },
-                placeholder = { Text("Search films, directors...") },
+                placeholder = { Text("Busca tus peliculas preferidas...") },
                 leadingIcon = {
                     Icon(Icons.Default.Search, "Search")
                 },
@@ -151,7 +151,7 @@ fun SearchView(viewModel: FilmViewModel, navController: NavController) {
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
                     Text(
-                        "No results found for \"$query\"",
+                        "No se encuentra resultados para \"$query\"",
                         color = MaterialTheme.colorScheme.onBackground
                     )
                 }

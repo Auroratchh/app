@@ -55,7 +55,7 @@ fun DetailsView(viewModel: FilmViewModel, navController: NavController, id: Stri
     Scaffold(
         topBar = {
             CenterAppBar(
-                name = film?.title ?: "Loading...",
+                name = film?.title ?: "Cargando...",
                 containerColor = MaterialTheme.colorScheme.surface,
                 onNavigationClick = {
                     navController.popBackStack()
@@ -72,7 +72,7 @@ fun DetailsView(viewModel: FilmViewModel, navController: NavController, id: Stri
                 ) {
                     Icon(
                         imageVector = if (film.isFavorite) Icons.Filled.Favorite else Icons.Filled.FavoriteBorder,
-                        contentDescription = if (film.isFavorite) "Remove from favorites" else "Add to favorites",
+                        contentDescription = if (film.isFavorite) "Elimina de favoritos" else "Añade favoritos",
                         tint = if (film.isFavorite) Color.Red else Color.White,
                         modifier = Modifier.size(28.dp)
                     )
